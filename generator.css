@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: black;
+    background-image: url(https://wallpaperaccess.com/full/11207.jpg);
+    /*background-image: url(https://images7.alphacoders.com/531/thumb-1920-531424.jpg);*/
+    /*background-image: url(https://wallpaper.dog/large/10928921.jpg);*/
+    /*background-image: url(https://images7.alphacoders.com/997/997948.jpg);*/
+    /*background-image: url(https://images.hdqwalls.com/wallpapers/deer-fantasy-art-ut.jpg);*/
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+header{
+     top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    box-shadow: 2px 2px 20px black;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 500px;
+    backdrop-filter: blur(2px);
+}
+.text1{
+    margin-left: 200px;
+}
+.fa-solid.fa-address-book{
+    position: absolute;
+    margin-left: 150px;
+    font-size: 50px;
+    margin-top: -25px;
+}
+.navigation a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-family:sans-serif;
+    margin-right: 60px;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0); 
+    transition: transform .5s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    box-shadow: 2px 2px 20px black;
+}
+h4{
+    color: ghostwhite;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    margin-top: 40px;
+    font-size: 50px;
+}
+.qricon{
+    font-size: 80px;
+}
+.container{
+    margin-top: -130px;
+    position: absolute;
+    background: white;
+    width: 400px;
+    padding: 20px 20px;
+    top: 40%;
+    left: 38%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+#inputbox{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    height: 50px;
+    font-size: 15px;
+}
+#generatebtn{
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    background: blue;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid blue;
+    outline: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 0px 3px blue; 
+}
+#generatebtn:hover{
+    background-color: darkblue;
+    border-color: blue;
+}
+#text{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 5px;
+    color: ghostwhite;
+}
+#image{
+    width: 200px;
+    max-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 2s;
+}
+#image img{
+    width: 100%;
+    padding: 10px;
+    border-color: black;
+}
+#image.showimage{ 
+    max-height: 200px;
+    margin: 10px auto;
+    margin-bottom: -12px;
+}
+.error{
+    animation: shake 10;
+    animation-duration: 0.1s ;
+    animation-timing-function: linear;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/* Design for mobile displays from 360×640 through 414×896. */
+@media only screen and (max-width: 360px){
+  
+}
+@media only screen and (max-width: 640px){
+   
+}
+@media only screen and (max-width: 414px){
+    body{
+        background-size: 100% 100%;
+    }
+    h4{
+        font-size 20px;
+    }
+    .qricon{
+        margin-left: 8px;
+    }
+    .container{
+        margin: auto;
+        margin-top: -130px;
+        width: auto;
+    }
+    .navigation{
+        position: ;
+        padding: 1px;
+        font-size: 10px;
+    }
+    .navigation a{
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        padding: 10px;
+    }
+    header{
+        margin-top: 470px;
+        margin-right: 100px;
+    }
+    .text1{
+        margin-left:180px;
+    }
+    .fa-solid.fa-address-book{
+        display: none;
+    }
+}
+@media only screen and (max-width: 896px){
+    body{
+        background-size: 100% 100%;
+    }
+    header{
+        font-size: 10px;
+        margin-left: -170px;
+        width: 1060px;
+    }
+    .navigation{
+        display: flex;
+        margin-right: -70px;
+    }
+    .navigation a{
+        padding: 10px;
+        margin-left: 30px;
+    }
+    .navigation a::after{
+        left: -25px;
+        width: 40px;
+        height: 4px;
+    }
+    .text1{
+        display: flex;
+        font-size: 25px;
+        margin-right: -20px;
+    }
+    h4{
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+    }  
+    .container{
+        margin-left: -90px;
+    }
+    span{
+        margin-left: -40px;
+        margin-right: -10px;
+    }
+}
